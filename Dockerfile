@@ -1,4 +1,21 @@
-FROM cassandra
-COPY setup_cassandra.sh /
-RUN chmod 777 ./setup_cassandra.sh 
+FROM ubuntu:14.04
+COPY Dockerfile /
+COPY install-reddit.sh /
 
+RUN mkdir install
+COPY install_cassandra /install/
+COPY setup_cassandra /install/
+
+#install python 2.7.6
+
+
+RUN \
+  apt-get update && \
+  apt-get install -y python python-dev python-pip python-virtualenv && \
+rm -rf /var/lib/apt/lists/*
+
+RUN  apt-get update \
+  && apt-get install -y wget \
+  && rm -rf /var/lib/apt/lists/*
+
+#RUN chmod +x ./install-reddit.sh
