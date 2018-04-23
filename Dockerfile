@@ -5,9 +5,9 @@ COPY install-reddit.sh /
 RUN mkdir install
 COPY install_cassandra.sh /install/
 COPY setup_cassandra.sh /install/
+COPY reddit.sh /install/
 
 #install python 2.7.6
-
 
 RUN \
   apt-get update && \
