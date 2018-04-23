@@ -20,7 +20,7 @@ RUN  apt-get update \
 
 #add a new user
 #RUN useradd -ms /bin/bash newuser
-USER newuser
+#USER newuser
 #WORKDIR /home/newuser
 
 #RUN chmod +x ./install-reddit.sh
