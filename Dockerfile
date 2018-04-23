@@ -19,7 +19,7 @@ RUN  apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 #add a new user
-RUN useradd -ms /bin/bash newuser
+#RUN useradd -ms /bin/bash newuser
 USER newuser
 #WORKDIR /home/newuser
 
