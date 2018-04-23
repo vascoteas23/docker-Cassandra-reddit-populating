@@ -18,4 +18,9 @@ RUN  apt-get update \
   && apt-get install -y wget \
   && rm -rf /var/lib/apt/lists/*
 
-#RUN chmod +x ./install-reddit.sh
+#add a new user
+RUN useradd -ms /bin/bash newuser
+USER newuser
+#WORKDIR /home/newuser
+
+RUN chmod +x ./install-reddit.sh
