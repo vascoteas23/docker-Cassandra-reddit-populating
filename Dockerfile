@@ -23,4 +23,4 @@ RUN  apt-get update \
 USER newuser
 #WORKDIR /home/newuser
 
-RUN chmod +x ./install-reddit.sh
+#RUN chmod +x ./install-reddit.sh
