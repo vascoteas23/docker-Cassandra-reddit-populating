@@ -41,6 +41,6 @@ sudo service cassandra start
 
 # check each port for connectivity
 echo "Waiting for cassandra to be available..."
-while ! nc -vz localhost 9160; do
-    sleep 1
-done
+#while ! nc -vz localhost 9160; do
+#    sleep 1
+#done
